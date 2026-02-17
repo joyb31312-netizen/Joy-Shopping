@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself Joy Banerjee</title>
+    <style>
+       /* --- General Setup --- */
+       * { box-sizing: border-box; margin: 0; padding: 0; }
+       body { 
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+           background-color: #000000; 
+           color: #000000;
+       }
+
+
+        /* --- Header & Navigation --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(253, 250, 240, 0.973);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #f03535;
+        }
+
+
+        .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+
+
+        .youtube-ad-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+.youtube-card {
+    background: linear-gradient(90deg, #FF0000, #cc0000);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+
+.youtube-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+
+.youtube-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.youtube-logo-circle {
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #FF0000;
+}
+
+
+.youtube-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+
+.youtube-text p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+.subscribe-btn {
+    background: white;
+    color: #FF0000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .youtube-card { flex-direction: column; text-align: center; gap: 15px; }
+}
+
+
+        /* --- Photo Gallery Grid --- */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+
+        /* Responsive Columns */
+        .photo-grid {
+            column-count: 4;
+            column-gap: 30px;
+        }
+
+
+        @media (max-width: 900px) { .photo-grid { column-count: 2; } }
+        @media (max-width: 600px) { .photo-grid { column-count: 1; } }
+
+
+        .photo-card {
+            background: white;
+            margin-bottom: 20px;
+            break-inside: avoid;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(255, 96, 47, 0.973);
+            transition: transform 0.5s ease;
+        }
+
+
+        .photo-card:hover { transform: translateY(-5px); }
+
+
+        .photo-card img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+
+        /* --- Photo Info & Download --- */
+        .photo-info {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .photo-title { font-size: 0.9rem; font-weight: 500; color: #110404; }
+
+
+        .btn-download {
+            background: #1d1a1a;
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+
+        .btn-download:hover { background: #031222; }
+
+
+        footer { text-align: center; padding: 50px; color: #999; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+ 
+<header>
+<div class="logo">High Definition Images & Animations</div>
+</header>
+    
+<div class="gallery-container">
+<div class="photo-grid"> 
+    
+<div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+  <div class="photo-card">
+    <img src="https://picsum.photos/id/43/600/900" alt="Architecture">
+    <div class="photo-info">
+        <span class="photo-title">Urban Explorer</span>
+        <a href="https://picsum.photos/id/43/600/900" download="Urban.jpg" class="btn-download">Download</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+   <footer>
+     <p>&copy; 2026- Joy Shopping. All rights reserved</p>
+ </footer>
