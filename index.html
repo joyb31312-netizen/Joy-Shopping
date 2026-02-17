@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself Joy Banerjee</title>
+    <style>
+        /* --- General Setup --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+            background-color: #0e0e2c; 
+            color: #1d1d1f;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(253, 249, 249, 0.973);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+
+        /* --- Three Dots Menu --- */
+        .menu-wrapper { position: relative; }
+        
+        .three-dots {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px 10px;
+            user-select: none;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+        
+        .three-dots:hover { background: #faf4f4; }
+
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background: rgb(31, 13, 13);
+            min-width: 180px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #e93c3c;
+        }
+
+        .youtube-ad-container {
+    max-width:1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.youtube-card {
+    background: linear-gradient(90deg, #FF0000, #cc0000);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: transform 0.7s ease, box-shadow 0.4s ease;
+}
+
+.youtube-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.youtube-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.youtube-logo-circle {
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.youtube-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.youtube-text p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.subscribe-btn {
+    background: white;
+    color: #FF0000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .youtube-card { flex-direction: column; text-align: center; gap: 15px; }
+}
+
+        .dropdown-menu.show { display: block; }
+
+        .dropdown-menu ul { list-style: none; }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #fdfcfc;
+            font-size: 0.97rem;
+            transition: background 0.5s;
+        }
+
+        .dropdown-menu li a:hover { background: #f7efef; color: #ee5151; }
+
+        /* --- Photo Gallery Grid --- */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Responsive Columns */
+        .photo-grid {
+            column-count: 4;
+            column-gap: 30px;
+        }
+
+        @media (max-width: 900px) { .photo-grid { column-count: 2; } }
+        @media (max-width: 600px) { .photo-grid { column-count: 1; } }
+
+        .photo-card {
+            background: white;
+            margin-bottom: 20px;
+            break-inside: avoid;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(245, 58, 58, 0.877);
+            transition: transform 0.7s ease;
+        }
+
+        .photo-card:hover { transform: translateY(-5px); }
+
+        .photo-card img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        /* --- Photo Info & Download --- */
+        .photo-info {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .photo-title { font-size: 0.9rem; font-weight: 500; color: #110404; }
+
+        .btn-BuyNow {
+            background: #1d1a1a;
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .btn-BuyNow:hover { background: #031222; }
+
+        footer { text-align: center; padding: 50px; color: #999; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Joy Shopping</div>
+        
+        <div class="menu-wrapper">
+            <div class="three-dots" id="dotBtn">⋮</div>
+            <div class="dropdown-menu" id="dropdown">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="images.html">High Definition Images & Animations</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="gallery-container">
+        <div class="photo-grid">
+
+            <div class="photo-card">
+                <img src="https://m.media-amazon.com/images/I/81DO5IJMt3L._SY679_.jpg" alt="T shirt">
+                <div class="photo-info">
+                    <span class="photo-title">Lymio T Shirt for Men || Chain Collar Style T Shirt || Solid Style</span>
+                    <a href="https://amzn.to/4apcURe" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://m.media-amazon.com/images/I/71UiOWj2GfL._SX679_.jpg" alt="watches">
+                <div class="photo-info">
+                    <span class="photo-title">NIBOSI Women Stainless Steel Watches Analog Rose Gold Band</span>
+                    <a href="https://amzn.to/4axII6x" Buy Now="watches" target="_blank" class="btn-BuyNow">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/71Qkb9BzBeL._SX522_.jpg" alt="kurti">
+    <div class="photo-info">
+        <span class="photo-title">Amazon Brand - Myx Women's Embroidered Anarkali Kurta Pant Set with Organza Dupatta</span>
+        <a href="https://amzn.to/3MxEkN5" Buy Now="watches" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+<div class="youtube-ad-container">
+    <a href="https://youtube.com/@hellojoy135?si=Drf0GzRmTvVx5f9W?sub_confirmation=1" target="_blank" class="youtube-card">
+        <div class="youtube-info">
+            <div class="youtube-logo-circle">YT</div>
+            <div class="youtube-text">
+                <h2>Subscribe to My Channel</h2>
+                <p>🙋Hello Joy🤔</p>
+            </div>
+        </div>
+        <div class="subscribe-btn">Visit</div>
+    </a>
+</div>
+
+           <div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/51FtDFdGGZL._SY500_.jpg" alt="earings">
+    <div class="photo-info">
+        <span class="photo-title">Malabar Gold & Diamonds Starlet | 18 KT Pure Yellow Gold Floral Studs Earring</span>
+        <a href="https://amzn.to/465M9Ab" Buy Now="earings" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/51E8hWzJ2zL._SY625_.jpg" alt="T shirt">
+    <div class="photo-info">
+        <span class="photo-title">Bacca Bucci Balance Men’s Sports Sneakers | Ultra-Light Jacquard Running Shoes with Cushioned Rebound Sole | EVA + Rubber Heavy-Duty Outsole |</span>
+        <a href="https://amzn.to/4tDlwN2" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/91nou7obvRL._SY500_.jpg" alt="T shirt">
+    <div class="photo-info">
+        <span class="photo-title">Speed X Fashion Women's Handbag</span>
+        <a href="https://amzn.to/4rOvIR4" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/61INVCO9YeL._SY679_.jpg" alt="T shirt">
+    <div class="photo-info">
+        <span class="photo-title">GRECIILOOKS Co Ord Set for Women | Co Ord Set for Women Stylish | Travel Co Ord Set for Women | Festive Co Ord Set for Women |Blazer Co Ord Set for Women</span>
+        <a href="https://amzn.to/3Od72U3" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/71NeVk5kozL._SX679_.jpg" alt="T shirt">
+    <div class="photo-info">
+        <span class="photo-title">London Hills Women's Cotton Oversized Fit Printed Round Neck Oversized T-Shirt | Loose Fit Drop Shoulder T-Shirt Pack of 3</span>
+        <a href="https://amzn.to/40jtEEQ" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="https://m.media-amazon.com/images/I/814H+myBegL._SX385_.jpg" alt="T shirt">
+    <div class="photo-info">
+        <span class="photo-title">Kuchipoo Boys Full Sleeves Regular Fit Cotton T-Shirts</span>
+        <a href="https://amzn.to/3Od7uBJ" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2026- Joy Shopping. All rights reserved</p>
+    </footer>
+
+    <script>
+        const dotBtn = document.getElementById('dotBtn');
+        const dropdown = document.getElementById('dropdown');
+
+        // Toggle menu on click
+        dotBtn.addEventListener('click', (e) => {
+            dropdown.classList.toggle('show');
+            e.stopPropagation(); // Stops it from closing immediately
+        });
+
+        // Close menu if user clicks anywhere else
+        window.addEventListener('click', () => {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
