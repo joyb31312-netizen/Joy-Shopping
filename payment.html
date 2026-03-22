@@ -1,0 +1,69 @@
+<div class="crypto-payment-card">
+    <h2>Pay with Bitcoin (BTC)</h2>
+    <p>To unlock the High-Res download, please send exactly <b>0.0000015 BTC</b> to the address below:</p>
+
+    <div class="qr-container">
+        <img src="images/IMG_20260322_213744.jpg" alt="Zebpay BTC QR Code" style="width: 200px; border: 10px solid white; border-radius: 10px;">
+    </div>
+
+    <div class="address-box">
+        <span id="btcAddress">bc1qgcquud0xc5h537apgnvuhksnexvymdlhxme09v
+        </span> 
+        <button onclick="copyAddress()" class="copy-btn">Copy</button>
+    </div>
+
+    <div class="instructions">
+        <p><b>Step 1:</b> Send the BTC from your wallet.</p>
+        <p><b>Step 2:</b> Email your Transaction ID (TXID) to <b>joyb31312@gmail.com</b>.</p>
+        <p><b>Step 3:</b> I will verify the payment on Zebpay and email you the HD photo within 12 hours.</p>
+    </div>
+</div>
+
+<style>
+    .crypto-payment-card {
+        background: white;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+        border: 2px solid #f7931a; /* Bitcoin Orange */
+    }
+    .address-box {
+        background: #f8f9fa;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 10px;
+        font-family: monospace;
+        word-break: break-all;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copy-btn {
+        background: #f7931a;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .instructions {
+        text-align: left;
+        font-size: 0.9rem;
+        color: #555;
+        background: #fff9f0;
+        padding: 15px;
+        border-radius: 10px;
+    }
+</style>
+
+<script>
+    function copyAddress() {
+        var copyText = document.getElementById("btcAddress").innerText;
+        navigator.clipboard.writeText(copyText);
+        alert("Bitcoin Address Copied!");
+    }
+</script>
