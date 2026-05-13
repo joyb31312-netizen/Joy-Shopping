@@ -9,8 +9,8 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
-            background-color: #0e0e2c; 
-            color: #1d1d1f;
+            background-color: #000000; 
+            color: #000000;
         }
 
         /* --- Header & Navigation --- */
@@ -27,13 +27,13 @@
             border-bottom: 1px solid #e5e5e5;
         }
 
-        .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+        .logo { font-size: 2.0rem; font-weight: 700; letter-spacing: -0.5px; }
 
         /* --- Three Dots Menu --- */
         .menu-wrapper { position: relative; }
         
         .three-dots {
-            font-size: 30px;
+            font-size: 50px;
             cursor: pointer;
             padding: 5px 10px;
             user-select: none;
@@ -55,6 +55,42 @@
             overflow: hidden;
             border: 2px solid #e93c3c;
         }
+
+        :root {
+    /* Define your brand colors */
+    --primary-color: #f39112;
+    --text-main: #1f2937;
+    --heading-font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    /* Scales from 1.8rem on mobile to 3rem on large screens */
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em; /* Tighten for a modern look */
+    color: #f39112;
+}
+}
+
+h2 {
+    border-left: 5px solid #2563eb; /* A blue accent line on the left */
+    padding-left: 15px;
+    font-style: italic;             /* As you requested earlier */
+    color: #f39112;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+}
+
+h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: #4b5563;
+}
 
         .youtube-ad-container {
     max-width:1200px;
@@ -199,22 +235,27 @@
 <body>
 
     <header>
-        <div class="logo">Joy Shopping</div>
+        <div class="logo"><i>Myself Joy Shopping</i></div>
         
         <div class="menu-wrapper">
             <div class="three-dots" id="dotBtn">⋮</div>
             <div class="dropdown-menu" id="dropdown">
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="images.html">High Definition Images & Animations</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><i><a href="about.html">About Us</a></i></li>
+                    <li><i><a href="images.html">High Definition Images & Animations</a></i></li>
+                    <li><i><a href="privacy.html">Privacy Policy</a></i></li>
+                    <li><i><a href="contact.html">Contact Us</a></i></li>
                     
                 </ul>
             </div>
         </div>
     </header>
 
+    
+    
+    
+    <h1><i>👇Best Amazon Products 0n Discount - Just Go And Grab It👇</i></h1>
+    
     <div class="gallery-container">
         <div class="photo-grid">
 
@@ -254,7 +295,6 @@
         <a href="https://amzn.to/3MxEkN5" Buy Now="watches" target="_blank" class="btn-BuyNow">Buy Now</a>
     </div>
 </div>
-
 
            <div class="photo-card">
     <img src="https://m.media-amazon.com/images/I/51FtDFdGGZL._SY500_.jpg" alt="earings">
@@ -313,18 +353,6 @@
     </div>
 </div>
 
-                        <div class="youtube-ad-container">
-    <a href="https://youtube.com/@hellojoy135?si=Drf0GzRmTvVx5f9W?sub_confirmation=1" target="_blank" class="youtube-card">
-        <div class="youtube-info">
-            <div class="youtube-logo-circle">YT</div>
-            <div class="youtube-text">
-                <h2>Subscribe to My Channel</h2>
-                <p>🙋Hello Joy🤔</p>
-            </div>
-        </div>
-        <div class="subscribe-btn">Visit</div>
-    </a>
-</div>
 
             <div class="photo-card">
     <img src="https://m.media-amazon.com/images/I/71DAtqHZoyL._SL1500_.jpg" alt="T shirt">
@@ -348,6 +376,20 @@
         <span class="photo-title">4 Pcs Wardrobe Cloth Organizer for Storage Box with Label Card & Holder | Foldable Clothes Organiser with Steel Frame & Handle</span>
         <a href="https://amzn.to/4rHVE0o" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
     </div>
+</div>
+
+
+                        <div class="youtube-ad-container">
+    <a href="https://youtube.com/@hellojoy135?si=Drf0GzRmTvVx5f9W?sub_confirmation=1" target="_blank" class="youtube-card">
+        <div class="youtube-info">
+            <div class="youtube-logo-circle">YT</div>
+            <div class="youtube-text">
+                <h2>Subscribe to My Channel</h2>
+                <p>🙋Hello Joy🤔</p>
+            </div>
+        </div>
+        <div class="subscribe-btn">Visit</div>
+    </a>
 </div>
 
         <div class="photo-card">
@@ -375,21 +417,10 @@
     </div>
 </div>
 
-    <div class="photo-card">
-    <img src="https://m.media-amazon.com/images/I/61mwiykAv7L._SL1080_.jpg" alt="T shirt">
-    <div class="photo-info">
-        <span class="photo-title">Decoy Luxury Blue Zephyr True Eau De Parfum - 100ml | Fresh Aquatic Citrus Perfume for Men</span>
-        <a href="https://amzn.to/4bn6wfh" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
-    </div>
-</div>
+     
+            
+  <h1><i>👇Enjoy The Seasonal Outfits With Myself Joy Shopping👇</i></h1>
 
-    <div class="photo-card">
-    <img src="https://m.media-amazon.com/images/I/61mwiykAv7L._SL1080_.jpg" alt="T shirt">
-    <div class="photo-info">
-        <span class="photo-title">Decoy Luxury Blue Zephyr True Eau De Parfum - 100ml | Fresh Aquatic Citrus Perfume for Men</span>
-        <a href="https://amzn.to/4bn6wfh" Buy Now="T shirt" target="_blank" class="btn-BuyNow">Buy Now</a>
-    </div>
-</div>
             
 
     <footer>
